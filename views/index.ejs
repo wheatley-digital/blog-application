@@ -1,0 +1,74 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <section class="hero-section-index">
+        <div class="hero-wrapper-index">
+            <h1 class="hero-title-index">Your Blog, My Blog, Everybody's Blog.</h1>
+            <p class="hero-text-index">Add Your Content Below.</p>
+        </div>
+    </section>
+    <section class="blog-section-index">
+        <div class="blog-list-index">
+            <h2>Blog List</h2>
+            <table class="table-index">
+                <thead>
+                    <tr>
+                        <th scope="col">Blog Number</th>
+                        <th scope="col">Blog Title</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <% if (locals.blogs) { %>
+                        <% for (let i=0; i<blogs.length; i++) { %>
+                        <tr>
+                          <th scope="row"><%= i %> </th>
+                          <td class="title-index">
+                            <form action="/blog" method="POST">
+                                <input name="blog-unedited" type="submit" value="<%= blogs[i].title %>" class="link-index">
+                            </form></td>
+                          <td class="category-index"> <%= blogs[i].category %> </td>
+                          <td class="delete-index">
+                            <form action="/delete-blog" method="POST">
+                                <button class="delete-button-index" type="submit" name="delete-blog" value="<%= i %>">Delete Blog</button>
+                            </form>
+                          </td>
+                        </tr>
+                        <% } %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <div class="create-blog-wrapper-index">
+            <h2>Create Blog</h2>
+            <form class="create-blog-form-index" action="/" method="post">
+              <ul>
+                <li>
+                  <label for="title">Title</label>
+                  <input class="txt-index" type="text" id="title-index" name="blog_title_index" placeholder="Enter your blog title..." required/>
+                </li>
+                <li>
+                  <label for="date">Date</label>
+                  <input class="txt-index" type="text" id="date-index" name="blog_date_index" placeholder="Enter today's date..." required/>
+                </li>
+                <li>
+                  <label for="category">Category</label>
+                  <input class="txt-index" type="text" id="category-index" name="blog_category_index" placeholder="Enter your blog category..." required/>
+                </li>
+                <li>
+                  <label for="content">Content</label>
+                  <textarea name="blog_content_index" id="content-index" cols="40" rows="10" placeholder="Enter your content..." required></textarea>
+                </li>
+                <li>
+                  <label for="thanks">Thanks</label>
+                  <textarea name="blog_thanks_index" id="thanks-index" cols="40" rows="5" placeholder="Who would you like to thank..." required></textarea>
+                </li>
+                <li>
+                  <input class="submit-button" type="submit" value="Submit" />
+                </li>
+              </ul>
+            </form>
+        </div>
+    </section>
+</main>
+<%- include("partials/footer.ejs") %>

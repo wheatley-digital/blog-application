@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <section class="blog-title-wrapper-blog">
+        <a href="/">
+            <img class="back-arrow-blog" src="/images/arrow.png" alt="arrow">
+        </a>
+        <h1 class="title-blog"><%=blog.title%></h1>
+        <p class="meta-blog">Date: <%=blog.date%></p>
+        <p class="meta-blog">Category: <%=blog.category%></p>
+    </section>
+    <section class="content-wrapper-blog">
+        <div id="container-blog">
+            <h2>Content</h2>
+            <p id="edit-blog" class="content-blog"> <%= blog.content %> </p>
+            <form action="/edit-blog" method="POST">
+                <button id="edit-button-blog" type="submit">Edit Content</button>
+            </form>
+            <h2>Thanks</h2>
+            <p id="edit-thanks-blog" class="content-blog"> <%= blog.thanks %> </p>
+            <form action="/edit-thanks-blog" method="POST">
+                <button id="edit-thanks-button-blog" type="submit">Edit Thanks</button>
+            </form>
+        </div>
+    </section>
+</main>
+<%- include("partials/footer.ejs") %>

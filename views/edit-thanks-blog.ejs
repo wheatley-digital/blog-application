@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+<main>
+    <section class="blog-title-wrapper-blog">
+        <a href="/">
+            <img class="back-arrow-blog" src="/images/arrow.png" alt="arrow">
+        </a>
+        <h1 class="title-blog"><%=blog.title%></h1>
+        <p class="meta-blog"><%=blog.date%></p>
+        <p class="meta-blog"><%=blog.category%></p>
+    </section>
+    <section class="content-wrapper-edit-thanks-blog">
+        <h2>Update Thanks</h2>
+        <div id="container-blog">
+            <form action="/updated-thanks-blog" method="POST">
+                <textarea name="new-thanks-edit-blog" id="newContent-edit-blog" cols="40" rows="5" placeholder="Add updated thanks" required></textarea>
+                <button id="done-button-blog" type="submit">Save</button>
+            </form>
+        </div>
+    </section>               
+</main>
+<%- include("partials/footer.ejs") %> 

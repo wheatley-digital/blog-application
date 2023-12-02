@@ -1,0 +1,298 @@
+/* UNIVERSAL */
+
+* {
+    font-family: "Merriweather";
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+    color: #FF5B8F;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+td {
+    color: #FF5B8F;
+    padding: 0 15px;
+}
+
+th {
+    color: #FF5B8F;
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+li {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+}
+
+label {
+    color:#FF5B8F;
+    text-align: left;
+    font-weight: 700;
+}
+
+section {
+    width: 100vw;
+}
+
+/* INDEX.EJS */
+
+/* Hero Section */
+
+.hero-section-index {
+    background-image: url("../images/Cool Background.jpg");
+    object-fit: cover;;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-wrapper-index {
+    max-width: 1000px;
+    padding-left: 120px;
+}
+
+.hero-title-index {
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 90px;;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.hero-text-index {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Blog List Section */ 
+.blog-section-index {
+    background-color: #1E1E1E;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.blog-list-index {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+}
+
+.table-index {
+    margin-top: 20px;
+}
+
+.category-index {
+    color: rgb(243, 154, 243)
+}
+
+.link-index {
+    color: white;
+    background: none;
+    border: none;
+}
+
+.link-index:hover {
+    color: #FF5B8F;
+    cursor: pointer;
+}
+
+.delete-button-index {
+    color: white;
+    background: none;
+    border-color: red;
+
+}
+
+.delete-button-index:hover {
+    background:red;
+}
+
+/* Create Blog */
+
+.create-blog-wrapper-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    text-align: center;
+}
+
+input.txt-index {
+    width: 100%;
+    height: auto;
+    font-family: "Merriweather";
+}
+
+/* BLOG.EJS */
+
+.back-arrow-blog {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.blog-title-wrapper-blog {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 400px;
+    background-image: url("../images/Cool Background.jpg");
+    justify-content: center;
+    align-items: center;
+}
+
+.title-blog {
+    color: white;
+    font-weight: bold;
+    font-size: 75px;
+    text-align: center;
+}
+
+.meta-blog {
+    margin-top: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.content-wrapper-blog {
+    background-color: #1E1E1E;
+    height: auto;
+}
+
+.content-blog {
+    color: white;
+    line-height: 30px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+#container-blog {
+    width: 80%;
+    height: 100%;
+    padding: 50px;
+}
+
+#edit-blog {
+    padding: 5px;
+    outline: none;
+}
+
+#edit-button-blog {
+    margin-bottom: 60px;
+}
+
+/* EDIT-BLOG.EJS AND EDIT-THANKS-BLOG.EJS */
+.content-wrapper-edit-thanks-blog {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PARTIALS */
+
+/* footer.ejs */
+
+.footer-section {
+    background-color: #1E1E1E;
+    text-align: center;
+    border-top: solid;
+    border-color: #FF5B8F;
+    border-width: 2px;
+    width: 100vw;
+}
+
+.footer-text {
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1210px) {
+    .blog-section-index {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+}
+
+@media (max-width: 729px) {
+    .hero-title-index {
+        font-size: 45px;
+    }
+
+    .hero-wrapper-index {
+        max-width: 600px;
+    }
+
+    .hero-text-index {
+        font-size: 22.5px;
+    }
+
+    .title-blog {
+        font-size: 45px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+}
+
+@media (max-width: 636px) {
+    * {
+        font-size: 12px;
+    }
+
+    td {
+        padding: 0 5px;
+    }
+
+    .create-blog-form-index {
+        width: 60%;
+    }
+
+    .hero-wrapper-index {
+        padding-left: 20px;
+    }
+}

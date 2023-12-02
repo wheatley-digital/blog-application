@@ -1,0 +1,21 @@
+
+<footer class="footer-section">
+    <p class="footer-text">Copyright &copy; <%= new Date().getFullYear() %> </p>
+</footer>
+<script type="text/javascript">
+    var paragraph = document.getElementById("edit-blog");
+    var editButton = document.getElementById("edit-button-blog");
+    var doneButton = document.getElementById("done-button-blog");
+
+    editButton.addEventListener("click", function() {
+        paragraph.contentEditable = true;
+        paragraph.style.backgroundColor = "#303030";
+    } );
+
+    doneButton.addEventListener("click", function() {
+        paragraph.contentEditable = false;
+        paragraph.style.backgroundColor = "#1E1E1E"; 
+    } );
+</script>
+</body>
+</html>
